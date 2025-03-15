@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>colour changing thing</title>
+  <style>
+    body, html {
+    
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #29292b;
+      color: white;
+      font-size: 30px;
+    }
+
+    .container {
+        margin:20px;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      
+      width: 1000px;
+      height: 1000px;
+      border: 5px solid #000;
+      background-color: #fff;
+      box-sizing: border-box;
+    }
+
+    .box {
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      border: 1px solid #050505;
+      
+    }
+  </style>
+</head>
+<body>
+    <label for="colorOptions">Choose a color scheme:</label>
+    <select id="colorOptions" name="col">
+        <option value=0>unicornPastels</option>
+        <option value=1>barbieBoldColors</option>
+        <option value=2>darkBluesGreys</option>
+        <option value=3>seaGlass</option>
+        <option value=4>earthyTones</option>
+        <option value=5>christmasColors</option>
+    </select>
+    
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+<script>
+
+const barbieBoldColors = [
+    'hotpink',        // Bright, bold pink
+    'fuchsia',        // Deep pink-purple
+    'magenta',        // Rich pinkish purple
+    'electricpink',   // Neon bright pink
+    'purple',         // Deep purple with energ
+];
+
+    
+    const earthyTones = [
+    'forestgreen',    // Deep green like forest leaves
+    'olive',          // Earthy greenish-brown
+    'saddlebrown',    // Rich brown like tree bark
+    'peru',           // Earthy brown-orange
+    'chocolate',      // Deep, dark brown
+    'darkolivegreen', // Dark green reminiscent of moss
+    'tan',            // Warm, earthy tan
+    'burlywood',      // Soft, warm brownish-yellow
+    'goldenrod',      // Warm yellow reminiscent of sunlight
+    'darkkhaki',      // Darker, muted yellow-green
+    'beige',       // Light natural beige/cream color
+    'darkgreen',      // Forest-like deep green
+    'lightgreen',     // Soft grass-like green
+    'darksalmon',     // Soft brown-pink with a warm tone
+    'cadetblue',      // Muted blue-green tone
+    'rosybrown',      // Soft rose with brown undertones
+    'mediumseagreen', // A medium green similar to moss
+    'slategray',      // Cool gray with a hint of blue
+    'lightsteelblue', // Subtle, light blue with steel undertones
+    'seagreen',       // Ocean-inspired green
+    'mediumaquamarine', // Soft blue-green
+    'khaki',          // Light brownish-yellow
+    'mediumspringgreen', // Fresh green like spring leaves
+    'tomato',         // Warm reddish-orange
+    'darkseagreen'    // Deep green reminiscent of moss
+];
+const unicornPastels = [
+    'lavender',       // Light purple, gentle and calming
+    'lightpink',      // Soft pastel pink
+    'powderblue',     // Light, soft blue
+    'mintcream',      // Soft minty green
+    'peachpuff',      // Soft, light peach
+    'palevioletred',  // Soft pinkish-red
+    'thistle',        // Light purple with gray undertones
+    'lavenderblush',  // Light pinkish lavender
+    'lightgoldenrodyellow', // Soft golden yellow
+    'lightcyan',      // Very soft cyan
+    'aliceblue',      // Light, pale blue with a hint of gray
+    'floralwhite',    // Soft white with a floral hint
+    'mistyrose',      // Soft rose-pink color
+    'beige',          // Light, warm beige
+    'honeydew',       // Soft, pastel green
+    'seashell',       // Soft natural beige
+    'snow',           // Crisp, pale white
+];
+
+const seaGlass = [
+    'aqua',           // Bright, clear blue-green
+    'turquoise',      // Vibrant blue-green
+    'mediumturquoise',// Rich turquoise
+    'deepskyblue',    // Bright, clear sky blue
+    'dodgerblue',     // Vivid blue
+    'lightseagreen',  // Soft blue-green
+    'seagreen',       // Deep green-blue
+    'darkcyan',       // Deep cyan, ocean depths
+    'teal',           // Blue-green color
+    'cadetblue',      // Soft, muted blue with a greenish tint
+    'lightcyan',      // Very light, soft cyan
+    'paleturquoise',  // Soft turquoise
+    'mediumaquamarine',// Rich, soft blue-green
+    'slategray',      // Cool gray with blue undertones (like stormy ocean)
+];
+const darkBluesGreys = [
+    'midnightblue',     // Deep blue, like the midnight sky
+    'darkslategray',    // Dark gray with a bluish tint, moody and mysterious
+    'slateblue',        // Dark blue with a slight purple hue
+    'indigo',           // Deep, intense blue with a touch of purple
+    'darkblue',         // Classic dark blue
+    'charcoal',         // Very dark gray, almost black
+    'black',            // Classic deep black
+    'gunmetal',         // Dark gray with a metallic finish
+    'dimgrey',          // Muted gray with a cool tone
+    'lightsteelblue',   // Subtle and soft, steel-like blue-gray
+    'darkslateblue',    // Deep slate with blue undertones
+];
+
+
+const christmasColors = [
+    'red',             // Traditional, bright red
+    'darkgreen',     // Deep, rich green, reminiscent of pine trees
+    
+];
+
+colourList=[unicornPastels,barbieBoldColors,darkBluesGreys,seaGlass,earthyTones,christmasColors];
+    let colors = colourList[0];
+    const selectElement = document.getElementById("colorOptions");
+    
+    selectElement.addEventListener('change',function(){
+  
+        document.querySelector(".container").style.backgroundColor = "white"; 
+    // Reset the background color of all boxes to white
+    const allBoxes = document.querySelectorAll('.box');
+    allBoxes.forEach(box => {
+        box.style.backgroundColor = "white";
+    });
+        var selectElement = document.getElementById("colorOptions");
+        colors=colourList[this.value];
+    });
+
+    function getRandomColor(list) {
+    const randomIndex = Math.floor(Math.random() * list.length); // Generate a random index
+    return list[randomIndex]; // Return the value at the random index
+    }
+
+
+    const boxes=document.querySelectorAll('.box');
+    boxes.forEach(box => {
+      box.addEventListener('mouseenter', () => {
+        box.style.backgroundColor = getRandomColor(colors);; // Change text color on mouse enter
+      });
+     
+    });
+     
+    
+</script>
+</body>
+</html>
